@@ -24,7 +24,7 @@ public class FlightFilterDemo {
 
         // Правило: Общее время на земле превышает два часа
         FlightsFilter filter3 = new FlightsFilter();
-        filter3.addRule(new GroundRule());
+        filter3.addRule(new TotalGroundTimeRule());
         List<Flight> filteredFlights3 = filter3.filter(flights);
         System.out.println("Рейсы после применения правила: Наземного времени: " + filteredFlights3.size());
         filteredFlights3.forEach(System.out::println);
